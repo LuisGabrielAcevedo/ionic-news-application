@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title>
+      News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        *ngFor="let n of news"
+        size="12"
+        size-lg="3"
+        size-md="4"
+        size-sm="6"
+        size-xs="12"
+      >
+        <ion-card color="dark">
+          <ion-card-header>
+            <ion-card-subtitle>{{ n.source.name }}</ion-card-subtitle>
+            <ion-title>{{ n.title }}</ion-title>
+          </ion-card-header>
+          <ion-img *ngIf="n.urlToImage" [src]="n.urlToImage"></ion-img>
+          <ion-card-content>{{ n.description }}</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
