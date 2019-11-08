@@ -1,0 +1,11 @@
+<ion-card color="dark">
+  <ion-card-header>
+    <ion-card-subtitle>
+      <span class="text-primary">{{ index + 1 }}. </span>
+      <span class="n-soure-name">{{ new.source.name }}</span>
+    </ion-card-subtitle>
+    <ion-title no-padding>{{ new.title }}</ion-title>
+  </ion-card-header>
+  <ion-img *ngIf="new.urlToImage" [src]="new.urlToImage"></ion-img>
+  <ion-card-content>{{ new.description }}</ion-card-content>
+</ion-card>
