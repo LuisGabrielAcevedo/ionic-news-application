@@ -2,10 +2,14 @@
   <ion-card-header>
     <ion-card-subtitle>
       <span class="text-primary">{{ index + 1 }}. </span>
-      <span class="n-soure-name">{{ new.source.name }}</span>
+      <span class="n-soure-name">{{ news.source.name }}</span>
     </ion-card-subtitle>
-    <ion-title no-padding>{{ new.title }}</ion-title>
+    <ion-title (click)="openNews()" no-padding>{{ news.title }}</ion-title>
   </ion-card-header>
-  <ion-img *ngIf="new.urlToImage" [src]="new.urlToImage"></ion-img>
-  <ion-card-content>{{ new.description }}</ion-card-content>
+  <ion-img
+    *ngIf="news.urlToImage"
+    [src]="news.urlToImage"
+    (click)="openNews()"
+  ></ion-img>
+  <ion-card-content>{{ news.description }}</ion-card-content>
 </ion-card>
